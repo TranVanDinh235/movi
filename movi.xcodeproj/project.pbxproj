@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0880E3501031937255318104 /* Pods_moviTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6ABACED2F1135E3CAA308DD /* Pods_moviTests.framework */; };
-		1CA7208F2AEF4B4A00408113 /* moviApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA7208E2AEF4B4A00408113 /* moviApp.swift */; };
+		1CA7208F2AEF4B4A00408113 /* MoviApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA7208E2AEF4B4A00408113 /* MoviApp.swift */; };
 		1CA720912AEF4B4A00408113 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA720902AEF4B4A00408113 /* ContentView.swift */; };
 		1CA720932AEF4B4D00408113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CA720922AEF4B4D00408113 /* Assets.xcassets */; };
 		1CA720962AEF4B4D00408113 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CA720952AEF4B4D00408113 /* Preview Assets.xcassets */; };
@@ -40,7 +40,7 @@
 		0745FA9C5F205EB8992D9F59 /* Pods-movi-moviUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movi-moviUITests.release.xcconfig"; path = "Target Support Files/Pods-movi-moviUITests/Pods-movi-moviUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0B537DAE70A312CDDE611E9F /* Pods_movi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA7208B2AEF4B4A00408113 /* movi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CA7208E2AEF4B4A00408113 /* moviApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviApp.swift; sourceTree = "<group>"; };
+		1CA7208E2AEF4B4A00408113 /* MoviApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviApp.swift; sourceTree = "<group>"; };
 		1CA720902AEF4B4A00408113 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1CA720922AEF4B4D00408113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CA720952AEF4B4D00408113 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		1CA720822AEF4B4A00408113 = {
 			isa = PBXGroup;
 			children = (
-				1CA7208D2AEF4B4A00408113 /* movi */,
+				1CA7208D2AEF4B4A00408113 /* Movi */,
 				1CA7209E2AEF4B4D00408113 /* moviTests */,
 				1CA720A82AEF4B4D00408113 /* moviUITests */,
 				1CA7208C2AEF4B4A00408113 /* Products */,
@@ -108,15 +108,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1CA7208D2AEF4B4A00408113 /* movi */ = {
+		1CA7208D2AEF4B4A00408113 /* Movi */ = {
 			isa = PBXGroup;
 			children = (
-				1CA7208E2AEF4B4A00408113 /* moviApp.swift */,
+				1CA720C22AEFB61C00408113 /* Infrastructure */,
+				1CA720C12AEFB61600408113 /* Data */,
+				1CA720BC2AEF95A200408113 /* Domain */,
+				1CA720BA2AEF957A00408113 /* Application */,
+				1CA720BB2AEF959800408113 /* Presentation */,
 				1CA720902AEF4B4A00408113 /* ContentView.swift */,
 				1CA720922AEF4B4D00408113 /* Assets.xcassets */,
 				1CA720942AEF4B4D00408113 /* Preview Content */,
 			);
-			path = movi;
+			path = Movi;
 			sourceTree = "<group>";
 		};
 		1CA720942AEF4B4D00408113 /* Preview Content */ = {
@@ -144,6 +148,58 @@
 			path = moviUITests;
 			sourceTree = "<group>";
 		};
+		1CA720BA2AEF957A00408113 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1CA7208E2AEF4B4A00408113 /* MoviApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1CA720BB2AEF959800408113 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1CA720C02AEF962400408113 /* MoviesList */,
+				1CA720BE2AEF95CD00408113 /* MovieDetails */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1CA720BC2AEF95A200408113 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1CA720BE2AEF95CD00408113 /* MovieDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MovieDetails;
+			sourceTree = "<group>";
+		};
+		1CA720C02AEF962400408113 /* MoviesList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MoviesList;
+			sourceTree = "<group>";
+		};
+		1CA720C12AEFB61600408113 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1CA720C22AEFB61C00408113 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
 		363AAD61EA708BDF66A38B83 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,7 +210,6 @@
 				B04DC909685999B1C5D0BD38 /* Pods-moviTests.debug.xcconfig */,
 				EBE9ED853BF0D2708BD9B4A8 /* Pods-moviTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -371,7 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA720912AEF4B4A00408113 /* ContentView.swift in Sources */,
-				1CA7208F2AEF4B4A00408113 /* moviApp.swift in Sources */,
+				1CA7208F2AEF4B4A00408113 /* MoviApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
