@@ -1,0 +1,6 @@
+framework module Pods_moviTests {
+  umbrella header "Pods-moviTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
