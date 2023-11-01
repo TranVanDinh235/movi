@@ -7,15 +7,22 @@
 
 import SwiftUI
 
+enum Tab: String {
+    case Home
+    case Profile
+    case Search
+}
+
 struct ContentView: View {
+    private var selectedTab : Tab = .Home;
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Movie App")
+        TabView {
+            MoviesListView().tabItem {
+                Image(systemName: "film")
+                Text("Film")
+            }
         }
-        .padding()
     }
 }
 
